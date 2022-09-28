@@ -1,0 +1,18 @@
+mount-dir: "${LITEFS_NODES_DIR}/n1/mnt"
+data-dir: "${LITEFS_NODES_DIR}/n1/data"
+
+debug: true
+
+http:
+  # Specifies the bind address of the HTTP API server.
+  addr: ":20202"
+
+static:
+  # Specifies that the current node is the primary.
+  primary: true
+
+  # Required. Hostname of the primary node.
+  hostname: "localhost"
+
+  # Required. The API URL of the primary node.
+  advertise-url: "http://localhost:20202"
